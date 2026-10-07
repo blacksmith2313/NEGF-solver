@@ -13,11 +13,15 @@ def run_solver():
     with open(PROF, "r") as f:
         original_content = f.read()
 
-    pattern = re.compile(r'mode\s*=\s*"phonon"')
+    pattern1 = re.compile(r'mode\s*=\s*"phonon"')
+    pattern2 = re.compile(r'mode\s*=\s*"ballistic"')
 
-    new_pattern = 'mode = "ballistic"' 
-
-    updated_code = pattern.sub(new_pattern, original_content)
+    if pattern2.search(original_content):
+        new_pattern = 'mode = "phonon"' 
+        updated_code = pattern2.sub(new_pattern, original_content)
+    elif pattern1.search(original_content):
+        new_pattern = 'mode = "ballistic"' 
+        updated_code = pattern1.sub(new_pattern, original_content)
 
     with open(PROF, "w") as f:
         f.write(updated_code)
