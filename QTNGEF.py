@@ -8,6 +8,7 @@ from numba import njit
 from numba import prange
 import cmath
 # import math
+#
 
 hbar = 1.054e-34
 q = 1.6022e-19
@@ -449,16 +450,16 @@ def single_bias_execute(Bias, Vx, mode):
 
 
 # if __name__ == "__main__":
-    # x = np.linspace(0,l,N)
-    # Vx, Ec = prf.potential_profile(0.3)
-    # n, _ , I, transmission, E_longitudinal = single_bias_execute(0.3, Vx, mode)
-    # transmission = np.abs(transmission)
-    # plt.contourf(x/1E-9, E_longitudinal/q, transmission,levels=1000, cmap='plasma') 
-    # plt.plot(x/1E-9, Vx/q, color='red')
-    # plt.xlabel("position (nm)")
-    # plt.ylabel("Energy (ev)")
-    # # print(I)
-    # # plt.plot(n)
-    # # # plt.plot(p)
-    # plt.grid(True)
-    # plt.show()
+#     x = np.linspace(0,l,N)
+#     Vx, Ec = prf.potential_profile(0.3)
+#     n, _ , I, spectrum, transmission, E_longitudinal = single_bias_execute(0.3, Vx, mode)
+#     transmission = np.abs(transmission)
+#     plt.contourf(x/1E-9, E_longitudinal/q, transmission,levels=1000, cmap='plasma') 
+#     plt.plot(x/1E-9, Vx/q, color='red')
+#     plt.xlabel("position (nm)")
+#     plt.ylabel("Energy (ev)")
+#     # print(I)
+#     # plt.plot(n)
+#     # # plt.plot(p)
+#     plt.grid(True)
+#     plt.show()

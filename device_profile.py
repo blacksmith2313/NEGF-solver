@@ -28,7 +28,7 @@ q = 1.6022E-19
 kB = 1.380649E-23
 T = 300
 
-mode = "ballistic"
+mode = "phonon"
 
 # L = np.array([30E-9, 10E-9, 2.2E-9, 6.4e-09 , 2.2E-9, 10E-9, 30E-9]) # length profile in m
 # L = NEGF.L
@@ -41,7 +41,7 @@ mode = "ballistic"
 # permittivity = [13.18*e, 13.18*e, 13.18*e, 13.18*e, 13.18*e]
 # sound_velocity = [5E3, 5E3, 5E3, 5E3, 5E3] # in m/s
 # mass_densities = [5320, 5320, 5320, 5320, 5320] # in kg/m3
-# deformation_optical = [5E10*q, 5E10*q, 5E10*q, 5E10*q, 5E10*q] # in 
+# deformation_optical = [6E11*q, 6E11*q, 6E11*q, 6E11*q, 6E11*q] # in 
 # deformation_acoustic = [7*q, 7*q, 7*q, 7*q, 7*q] # in 
 # E_phonon = [0.0350*q, 0.0350*q, 0.0350*q, 0.0350*q, 0.0350*q] # in 
 
@@ -168,7 +168,6 @@ def potential_profile(bias):
     Nc = Nc_prf
     r = Nd_regions[0] / Nc
 
-    # eta = np.log(r) + (r / np.sqrt(8)) - 0.00495009 * (r**2) + 0.000148383 * (r**3)
     eta = np.log(r) + r/np.sqrt(8) + r**2/(48*np.sqrt(2)) + r**3/768 + r**4/(12288*np.sqrt(2))
     # eta = 0
 
