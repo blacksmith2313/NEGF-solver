@@ -32,3 +32,7 @@ To run this solver, run the command `python3 wrapper.py`. It should start the so
 ![RTD4](./plots/RTD_ballistic_illus_2.png)
 
 *Conduction band and Electron concentration profile, for RTD, without phonons, with self consistency at 0.5V*
+
+![RTD4](./plots/IV_compare.png)
+
+*IV characteristics*
